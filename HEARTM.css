@@ -7,27 +7,19 @@ body {
   scrollbar-width: none;
 }
 
-.heart {
-  fill: red;
-  position: relative;
-  top: 5px;
-  width: 50px;
-  animation: pulse 1s ease infinite;
+/* Stili per il header */
+#header {
+  margin-top: 20px;
+  text-align: center;
 }
 
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.3);
-  }
-  100% {
-    transform: scale(1);
-  }
+/* Se desideri stilizzare ulteriormente l'emoji (opzionale) */
+#header h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
-#heart {
-  position: relative;
   width: 100px;
   height: 90px;
   text-align: center;
