@@ -6,9 +6,6 @@ var headerHeight = header ? header.offsetHeight : 0;
 O = c.width = innerWidth;
 Q = c.height = innerHeight - headerHeight;
 
-// Aggiungiamo uno spostamento per il cuore, sollevandolo verso l'alto
-var heartYOffset = 100; // Puoi regolare questo valore per spostare il cuore verso l'alto o verso il basso
-
 e = [];// trails
 h = [];// heart path
 
@@ -22,7 +19,7 @@ Y = 6.3; // approssimativamente 2*PI
 for(i = 0; i < Y; i += 0.2) {
   h.push([
     O/2 + 180 * M.pow(M.sin(i), 3),
-    (Q/2 + heartYOffset) + 10 * ( - (15 * C(i) - 5 * C(2*i) - 2 * C(3*i) - C(4*i)) )
+    Q/2 + 10 * ( - (15 * C(i) - 5 * C(2*i) - 2 * C(3*i) - C(4*i)) )
   ]);
 }
 
