@@ -13,13 +13,6 @@ body {
   text-align: center;
 }
 
-/* Se desideri stilizzare ulteriormente l'emoji (opzionale) */
-#header h1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
   width: 100px;
   height: 90px;
   text-align: center;
