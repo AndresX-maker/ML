@@ -13,31 +13,11 @@ body {
   text-align: center;
 }
 
-  width: 100px;
-  height: 90px;
-  text-align: center;
-  font-size: 16px;
-  position: relative;
+/* Se desideri stilizzare ulteriormente l'emoji (opzionale) */
+#header h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
-#heart span {
-  width: 100%;
-  display: block;
-  top: 50%;
-  z-index: 1;
-}
-
-#heart {
-  width: 100px;
-  height: 90px;
-  text-align: center;
-  font-size: 16px;
-}
-
-#heart span {
-  width: 100%;
-  display: block;
-  left: 0;
-  right: 0;
-  z-index: 1;
-}
