@@ -1,4 +1,14 @@
-// Imposta il canvas e l'altezza del cuore come prima
+// Ottieni l'altezza dell'header
+var header = document.getElementById('header');
+var headerHeight = header ? header.offsetHeight : 0;
+
+// Imposta le dimensioni del canvas tenendo conto dell'altezza dell'header
+O = c.width = innerWidth;
+Q = c.height = innerHeight - headerHeight;
+
+// Aggiungiamo uno spostamento per il cuore, sollevandolo verso l'alto
+var heartYOffset = 100; // Puoi regolare questo valore per spostare il cuore verso l'alto o verso il basso
+
 e = [];// trails
 h = [];// heart path
 
@@ -8,7 +18,7 @@ R = M.random;
 C = M.cos;
 Y = 6.3; // approssimativamente 2*PI
 
-// Calcola i nodi della curva del cuore
+// Calcola i nodi della curva del cuore (fonte: http://mathworld.wolfram.com/HeartCurve.html)
 for(i = 0; i < Y; i += 0.2) {
   h.push([
     O/2 + 180 * M.pow(M.sin(i), 3),
@@ -35,7 +45,7 @@ while (i < v) {
       y: y,
       X: 0, // velocità orizzontale
       Y: 0, // velocità verticale
-      R: (1 - k/v) + 5, // raggio aumentato da 1 a 2
+      R: (1 - k/v) + 1, // raggio
       S: R() + 1, // accelerazione
       q: ~~(R() * v), // nodo target sulla curva del cuore
       D: i % 2 * 2 - 1, // direzione lungo il percorso del cuore
@@ -50,7 +60,7 @@ while (i < v) {
 function render(p) { // disegna una particella
   a.fillStyle = p.f;
   a.beginPath();
-  a.arc(p.x, p.y, p.R, 0, Y, 1); // Usa il nuovo raggio
+  a.arc(p.x, p.y, p.R, 0, Y, 1);
   a.closePath();
   a.fill();
 }
