@@ -35,7 +35,7 @@ while (i < v) {
       y: y,
       X: 0, // velocità orizzontale
       Y: 0, // velocità verticale
-      R: (1 - k/v) + 60, // raggio aumentato da 1 a 2
+      R: (1 - k/v) + 5, // raggio aumentato da 1 a 2
       S: R() + 1, // accelerazione
       q: ~~(R() * v), // nodo target sulla curva del cuore
       D: i % 2 * 2 - 1, // direzione lungo il percorso del cuore
